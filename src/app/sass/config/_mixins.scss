@@ -1,0 +1,28 @@
+@mixin botons($bgc, $bc, $padding: 1em) {
+    background-color: $bgc;
+    padding: ($padding - 0.4em) $padding;
+    border: 2px solid $bc;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    color: $bc;
+}
+
+@mixin flexCenter($wrap: nowrap) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: $wrap;
+}
+
+@mixin marginCenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin bg-image($url) {
+    background-image: url('#{$url}');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,42 @@
+*,::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #efefef;
+    min-height: 100vh;
+    margin-top: 5rem;
+}
+
+.container{
+    width: 90%;
+    @include marginCenter;
+    border: 3px solid yellowgreen;
+}
+
+a{
+    text-decoration: none;
+}
+
+input, button{
+    outline: none;
+}
+
+input, select{
+    border: $border-color;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
