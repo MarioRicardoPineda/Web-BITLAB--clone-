@@ -1,7 +1,8 @@
-body{
-    background-color: #4a8;
-    h2{
-        color : #fff;
-        font-size: 40px;
-    }
-}
+
+@import "config/variables";
+@import "config/mixins";
+@import "config/normalize";
+
+
+@import "layout/header-menu";
+@import "components/botons";
