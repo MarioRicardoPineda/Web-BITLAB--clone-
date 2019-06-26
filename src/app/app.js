@@ -1,11 +1,9 @@
 
-import { hola } from "./js/menu";
+// import { hola } from "./js/menu";
 
 
 // Importamos los estiulos aquí
 
 import "./sass/style.scss"
-import "./assets/img/becas.png"
-import "./assets/img/academy.svg"
-
-hola("Mario");
+import "./assets/img/headway-566297-unsplash.jpg"
+import "./assets/img/logo-white.svg"
