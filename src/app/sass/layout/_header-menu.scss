@@ -5,7 +5,11 @@ header{
     top: 0;
     width: 100%;
     height: 5rem;
-    background-color: #f00;
+    background-color: transparent;
+}
+
+.header{
+    background-color: #fff;
 }
 
 .container-header{
@@ -16,7 +20,6 @@ header{
 
 .logo{
     width: 125px;
-    border: 1px solid #000;
     img{
         width: 100%
     }
@@ -24,7 +27,6 @@ header{
 
 .menu-ham {
     
-
     .bar{
         display: block;
         width: 35px;
@@ -35,9 +37,23 @@ header{
         transition: all .4s ease;
     }
 }
+.bar-color{
+    background-color: $main-color;
+}
+.close-mobile{
+    
+     .bar:nth-child(1){
+        transform: translate(0, 10px) rotate(-45deg) scale(1.1)
+    }
+     .bar:nth-child(2){
+        opacity: 0;
+    }
+     .bar:nth-child(3){
+        transform: translate(0, -10px) rotate(45deg) scale(1.1)
+    }
+}
 
 .menu{
-    // border: 5px solid #000;
     position: absolute;
     top: 5rem;
     left: 0;
@@ -45,13 +61,13 @@ header{
     height: 0;
     background-color: #fff;
     overflow: hidden;
-    transition: .4s ease;
+    transition: .4s ;
     h3{
         margin-top: 35px;
         margin-bottom: 60px;
         font-size: 35px;
         font-weight: bold;
-        width: 50%;
+        width: 70%;
     }
     .container{
         display: flex;

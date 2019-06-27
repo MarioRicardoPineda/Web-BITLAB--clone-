@@ -1,19 +1,49 @@
 
-let menuHam = document.querySelector("#menu-ham")
-let menu = document.querySelector("#menu")
+// Variables globales 
+const menuHam = document.querySelector("#menu-ham"),
+    menu = document.querySelector("#menu"),
+    header = document.querySelector("#header"),
+    logo = document.querySelector('#logo')
 
 
+//  el menu de mobile desplegable
 
-/*
-&:hover .bar:nth-child(1){
-        transform: translate(0, 10px) rotate(-45deg) scale(1.1)
+
+const menuMobile = () => {
+    if (menuHam.classList.toggle('close-mobile')) {
+        menu.style.height = " 100vh"
+        header.classList.add('header')
+        logo.src = "./assets/img/logo-fullcolor.svg"
+        menuHam.classList.add('bar-color')
+    } else {
+        menu.style.height = '0'
+        header.classList.remove('header')
+        logo.src = "./assets/img/logo-white.svg"
+    }
+}
+menuHam.addEventListener('click', menuMobile)
+
+//  Header change color 
+
+window.addEventListener('scroll', () => {
+    changeHeader()
+})
+
+const changeHeader = () => {
+
+    let scrollY = window.scrollY
+    // console.log(scrollY);
+    if (scrollY >= 300) {
+        header.classList.add('header')
+        logo.src = "./assets/img/logo-fullcolor.svg"
+        menuHam.style.backgroundColor = "#481AE7"
+    } else {
+        header.classList.remove('header')
+        logo.src = "./assets/img/logo-white.svg"
+        menuHam.style.backgroundColor = "#ffffff"
     }
 
-    &:hover .bar:nth-child(2){
-        opacity: 0;
-    }
 
-    &:hover .bar:nth-child(3){
-        transform: translate(0, -10px) rotate(45deg) scale(1.1)
-    }
-*/
+}
+
+header.addEventListener('scroll', changeHeader)
