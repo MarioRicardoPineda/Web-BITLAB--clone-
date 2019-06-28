@@ -5,15 +5,16 @@
 }
 
 body{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
-    margin-top: 5rem;
 }
 
 .container{
     width: 90%;
     @include marginCenter;
-    border: 3px solid yellowgreen;
+    @media screen and (min-width: 1024px){
+        width: 80%;
+    }
 }
 
 a{

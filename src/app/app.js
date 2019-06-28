@@ -10,6 +10,8 @@ import "./sass/style.scss"
 
 //  importar las imagenes
 
+// import img from "./assets/img"
+
 import "./assets/img/becas.png"
 import "./assets/img/favicon-bitlab.png"
 

@@ -1,8 +1,17 @@
 .btn{
     @include botons(transparent, $main-color, 1.2em);
+    transition: .2s;
     &:hover{
         background-color: $main-color;
         color: #fff;
-        transition: .2s;
+    }
+}
+
+.btn-white{
+    @include botons(transparent, #fff);
+    transition: .2s;
+    &:hover{
+        background-color: #fff;
+        color: #666666;
     }
 }

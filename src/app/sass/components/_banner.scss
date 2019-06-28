@@ -1,0 +1,29 @@
+.banner{
+    @include bg-image('../../assets/img/becas.png');
+    // background-color: #333;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    &-title{
+        @include flexCenter(wrap);
+        justify-content: flex-start;
+        @media screen and (min-width: 1024px){
+            width: 825px;
+        }
+        img{
+            margin-right: 30px;
+            margin-bottom: 4em;
+        }
+        img.digital{
+            width: 19em;
+        }
+        img.skills{
+            width: 16em;
+            padding-bottom: 20px;
+        }
+        img.academy{
+            width: 28em;
+        }
+    }
+}
