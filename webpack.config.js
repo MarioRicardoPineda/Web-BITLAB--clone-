@@ -4,7 +4,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
+    resolve: {
+      modules: [
+        'src/app',
+        'node_modules',
+      ],
+    },
+
     entry: "./src/app/app.js",
+    
     output : {
         path: path.resolve(__dirname + "/public"),
         filename: "js/main.js" 
@@ -25,19 +33,13 @@ module.exports = {
                 ]
             },
             {
-                test : /\.(png|jpe?g|gif|svg)$/,
-                use : [
-                    {
-                        loader : "file-loader",
-                        options : {
-                            name : '[name].[ext]',
-                            outputPath : 'assets/img/',
-                            useRelativePath : true
-                        }
-                    }
-
-                ]
-            }
+              test: /\.(png|ico|gif|svg|jpe?g)(\?[a-z0-9]+)?$/,
+              use: 'url-loader',
+            },
+            {
+              test: /\.html$/,
+              loader: 'html-loader'
+            },
         ]
     },
 
