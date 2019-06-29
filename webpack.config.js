@@ -25,19 +25,9 @@ module.exports = {
                 ]
             },
             {
-                test : /\.(png|jpe?g|gif|svg)$/,
-                use : [
-                    {
-                        loader : "file-loader",
-                        options : {
-                            name : '[name].[ext]',
-                            outputPath : 'assets/img/',
-                            useRelativePath : true
-                        }
-                    }
-
-                ]
-            }
+              test: /\.(png|ico|gif|svg|jpe?g)(\?[a-z0-9]+)?$/,
+              use: 'url-loader',
+            },
         ]
     },
 
