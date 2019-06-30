@@ -10,10 +10,10 @@ body{
 }
 
 .container{
-    width: 90%;
+    width: 95%;
     @include marginCenter;
     @media screen and (min-width: 1024px){
-        width: 80%;
+        width: 90%;
     }
 }
 

@@ -4,17 +4,26 @@ const menuHam = document.querySelector("#menu-ham"),
     menu = document.querySelector("#menu"),
     header = document.querySelector("#header"),
     logo = document.querySelector('#logo'),
-    bars = Array.prototype.slice.apply(document.querySelectorAll(".bar"))
+    bars = Array.prototype.slice.apply(document.querySelectorAll(".bar")),
+    links = Array.prototype.slice.apply(document.querySelectorAll(".menu__link"))
 
-const assets = (nameImg, colorBar, actionClass) => {
+
+const assets = (nameImg, colorBar, actionClass, colorLink) => {
 
     `${actionClass}` === 'add'
         ? header.classList.add('header')
         : header.classList.remove('header')
 
-    logo.src = `./assets/img/${nameImg}`
+    logo.src = require(`../assets/img/${nameImg}`)
+
     for (let bar in bars) {
         bars[bar].style.backgroundColor = `${colorBar}`
+    }
+
+    if(window.innerWidth >= 1024){
+        for (let link in links) {
+            links[link].style.color = `${colorLink}`
+        }
     }
 }
 
@@ -27,7 +36,7 @@ const menuMobile = () => {
     } else {
         menu.style.height = '0'
 
-        if (window.scrollY <= 100) {
+        if (window.scrollY <= 150) {
             assets('logo-white.svg', '#fff', 'remove')
         }
     }
@@ -43,8 +52,9 @@ window.addEventListener('scroll', () => {
 const changeHeader = () => {
     let scrollY = window.scrollY
 
-    scrollY >= 100
-        ? assets('logo-fullcolor.svg', '#481AE7', 'add')
-        : assets('logo-white.svg', '#fff', 'remove')
+    scrollY >= 150
+        ? assets('logo-fullcolor.svg', '#481AE7', 'add', "#212121")
+        : assets('logo-white.svg', '#fff', 'remove', "#ffffff")
+
 }
 header.addEventListener('scroll', changeHeader)

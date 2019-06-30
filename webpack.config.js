@@ -29,8 +29,19 @@ module.exports = {
                 use : [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
-                    "sass-loader"
+                    "sass-loader",
+                    'postcss-loader'
                 ]
+            },
+            {
+            loader: 'postcss-loader', // Run postcss actions
+                options: {
+                    plugins: function () { // postcss plugins, can be exported to postcss.config.js
+                    return [
+                        require('autoprefixer')
+                    ];
+                    }
+                }
             },
             {
               test: /\.(png|ico|gif|svg|jpe?g)(\?[a-z0-9]+)?$/,
