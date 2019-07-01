@@ -66,6 +66,7 @@ header{
     background-color: #fff;
     overflow: hidden;
     transition: .4s ;
+    box-shadow: 0 10px 15px rgba(#333, .4);
     h3{
         margin-top: 35px;
         margin-bottom: 60px;
@@ -99,7 +100,7 @@ header{
         top: 20px;
         left: 48%;
         background-color: transparent;
-
+        box-shadow: none;
         .container{
             display: flex;
             flex-direction: row;

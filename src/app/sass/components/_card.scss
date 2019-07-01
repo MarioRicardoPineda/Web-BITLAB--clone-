@@ -1,0 +1,63 @@
+.cursos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid #000;
+    margin-bottom: 40px;
+    padding: 5px;
+}
+
+.card-curso{
+    width: 85%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover{
+        box-shadow: 0 0 15px rgba(#222, .4);
+        transform: translateY(-10px);
+        img{
+            transform: scale(1.1);
+        }
+    }
+
+    .img{
+        overflow: hidden;
+        img{
+            display: block;
+            width: 100%;
+            transition: .2s;
+        }
+    }
+    .title-curso{
+        font-size: 20px;
+        padding: 15px;
+    }
+    .txt-curso{
+        padding: 20px;
+        strong{
+            display: block;
+            padding-bottom: 15px;
+        }
+        p{
+            font-size: .9em;
+        }
+    }
+    hr{
+        display: block;
+        background-color: #ddd;
+        height: 2px;
+        border: none;
+    }
+    .time{
+        padding: 15px;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        b{
+            font-size: 20px;
+        }
+    }
+}

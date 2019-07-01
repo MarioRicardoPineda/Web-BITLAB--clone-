@@ -4,7 +4,7 @@
   "description": "Este es un clone de una web llamada BITLAB",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server -d",
+    "start": "webpack-dev-server -d --open",
     "build": "rimraf public && webpack -p"
   },
   "repository": {

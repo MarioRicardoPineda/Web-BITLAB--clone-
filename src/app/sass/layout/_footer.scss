@@ -1,0 +1,44 @@
+
+footer{
+    background-color: #222;
+    padding: 30px;
+}
+
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media screen and (min-width: $desktop){
+        justify-content: space-between;
+    }
+
+    img, .txt-footer, .socials{
+        margin-bottom: 20px;
+        @media screen and (min-width: $desktop){
+            margin: 0;
+        }
+    }
+
+    img{
+        width: 100px;
+    }
+    .txt-footer{
+        color: #fff;
+    }
+    .socials{
+        color: #fff;
+        .icon{
+            margin: 0 10px;
+            font-size: 25px;
+            color : rgba(#fff, .6);
+            &:hover{
+                color: #fff;
+                cursor:pointer;
+            }
+        }
+        .fa-phone{
+            transform: rotate(90deg);
+        }
+    }
+}

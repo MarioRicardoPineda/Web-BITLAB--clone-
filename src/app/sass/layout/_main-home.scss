@@ -33,7 +33,7 @@
 .ofrecemos{
     margin-bottom: 4em;
     h3{
-        font-size: 50px;
+        font-size: 40px;
         font-weight: bold;
         margin-bottom: 1em;
         text-align: center;
@@ -51,16 +51,17 @@
         border-radius: 5px;
         @media screen and (min-width:$desktop){
             width: 35% - 10;
+            margin-bottom: 4em;
         }
         .txtCard{
             font-size: 1em;
         }
         &:hover{
             transform: translateY(-5px);
-            box-shadow: 0 0 10px 2px rgba(#111111, .5);
+            box-shadow: 0 0 15px 2px rgba(#333, .3);
         }
         .icon{
-            font-size: 2.2em;
+            font-size: 2em;
             color: $main-color;
             margin-bottom: 10px;
         }
@@ -68,10 +69,58 @@
 }
 
 // Que deseas aprender ?
-
+.sec{
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $desktop){
+        overflow: hidden;
+    }
+}
 .aprender{
-    background-color: #ddd;
+    background-color: #eee;
     padding: 3em;
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    img{
+        display: none;
+    }
+    @media screen and (min-width: $desktop){
+        left: 100px;
+        height: 40em;
+    }
+    @media screen and (min-width: $desktop-lg){
+        left: 200px;
+        img{
+            display: block;
+            width: 470px;
+            position: absolute;
+            left: -220px;
+            top: 90px;
+        }
+        .cuadro{
+            position: absolute;
+            top: 120px;
+            left: -70px;
+            width: 350px;
+            height: 420px;
+            border: 1px solid $purple;
+        }
+    }
+    
+    article{
+        position: relative;
+        @media screen and (min-width: $desktop){
+            right: 50px;
+        }
+        @media screen and (min-width: $desktop-lg){
+            right: -170px;
+            top: -30px;
+            width: 75%;
+        }
+    }
+
     h3{
         font-size: 2em;
         font-weight: bold;
@@ -80,7 +129,7 @@
     }
     .card-container-two{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         flex-wrap: wrap;
     }
     .card-learn{
@@ -95,7 +144,7 @@
         transition: .3s;
 
         @media screen and (min-width: $desktop){
-            width: 50% - 10;
+            width: 300px ;
             margin-right: 10px;
         }
 

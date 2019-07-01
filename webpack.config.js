@@ -5,62 +5,51 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
     resolve: {
-      modules: [
-        'src/app',
-        'node_modules',
-      ],
+        modules: [
+            'src/app',
+            'node_modules',
+        ],
     },
 
     entry: "./src/app/app.js",
-    
-    output : {
+
+    output: {
         path: path.resolve(__dirname + "/public"),
-        filename: "js/main.js" 
+        filename: "js/main.js"
     },
 
-    devServer : {
-        port : 5000
+    devServer: {
+        port: 5000
     },
 
-    module : {
-        rules : [
+    module: {
+        rules: [
             {
-                test : /\.(sa|sc|c)ss$/,
-                use : [
+                test: /\.(sa|sc|c)ss$/,
+                use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
-                    "sass-loader",
-                    'postcss-loader'
+                    "sass-loader"
                 ]
             },
             {
-            loader: 'postcss-loader', // Run postcss actions
-                options: {
-                    plugins: function () { // postcss plugins, can be exported to postcss.config.js
-                    return [
-                        require('autoprefixer')
-                    ];
-                    }
-                }
+                test: /\.(png|ico|gif|svg|jpe?g)(\?[a-z0-9]+)?$/,
+                use: 'url-loader',
             },
             {
-              test: /\.(png|ico|gif|svg|jpe?g)(\?[a-z0-9]+)?$/,
-              use: 'url-loader',
-            },
-            {
-              test: /\.html$/,
-              loader: 'html-loader'
+                test: /\.html$/,
+                loader: 'html-loader'
             },
         ]
     },
 
-    plugins : [
+    plugins: [
         new HtmlWebpackPlugin({
-            template : "./src/app/index.html"
+            template: "./src/app/index.html"
         }),
         new MiniCssExtractPlugin({
-            filename : "css/[name]-style.css"
-        })        
+            filename: "css/[name]-style.css"
+        })
     ],
-    
+
 }
