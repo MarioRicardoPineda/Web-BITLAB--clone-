@@ -32,11 +32,36 @@ let intros = [
     }
 ]
 
-const cursos = () =>{
+const cursos = document.querySelector("#cursos")
+
+const listCursos = () =>{
+
+    cursos.innerHTML = ""
 
     for(let i of intros){
-        console.log(i.teacher)
+
+        cursos.innerHTML += 
+        `
+        <div class="card-curso">
+            <div class="img">
+                <img src="${i.image}" alt="">
+            </div>
+
+            <article class="txt-curso">
+                <h3 class="title-curso">${i.title}</h3>
+                <strong>${i.teacher}</strong>
+                <p>${i.description}</p>
+                <hr>
+                <div class="time">
+                    <b>${i.time}</b>
+                    <a href="#s" class="btn">ver más</a>
+                </div>
+            </article>
+
+        </div>
+        
+        `
     }
 }
 
-window.addEventListener('load', cursos)
+window.addEventListener('load', listCursos)

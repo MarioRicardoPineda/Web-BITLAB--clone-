@@ -39,13 +39,14 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: 'html-loader'
-            },
+            }
         ]
     },
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/app/index.html"
+            filename : "index.html",
+            template: "./src/app/index.html" 
         }),
         new MiniCssExtractPlugin({
             filename: "css/[name]-style.css"

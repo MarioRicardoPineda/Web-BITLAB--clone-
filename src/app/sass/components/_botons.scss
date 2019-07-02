@@ -1,5 +1,5 @@
 .btn{
-    @include botons(transparent, $main-color, 1.2em);
+    @include botons(transparent, $main-color, 1.1em);
     transition: .2s;
     &:hover{
         background-color: $main-color;

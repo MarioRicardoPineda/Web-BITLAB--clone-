@@ -1,4 +1,5 @@
 @mixin botons($bgc, $bc, $padding: 1em) {
+    display: inline-block;
     background-color: $bgc;
     padding: ($padding - 0.4em) $padding;
     border: 2px solid $bc;

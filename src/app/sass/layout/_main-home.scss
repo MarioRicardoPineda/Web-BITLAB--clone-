@@ -77,12 +77,13 @@
     }
 }
 .aprender{
+    display: flex;
+    align-items: center;
     background-color: #eee;
     padding: 3em;
     position: relative;
-    
-    display: flex;
-    align-items: center;
+    margin-bottom: 5em;
+
     img{
         display: none;
     }
@@ -162,6 +163,74 @@
         }
         .card-title{
             font-size: 20px;
+        }
+    }
+}
+
+// Seccion de noticias
+
+.news{
+    padding: 2em;
+    margin-bottom: 10em;
+
+    .img-news{
+        img{
+            width: 100%;
+            margin-bottom: 4em;
+        }
+    }
+    
+    .txt-news{
+
+        h3, small{
+            margin-bottom: 0.8em;
+        }
+        h3{
+            font-size: 2em;
+            font-weight: bold;
+        }
+        h4{
+            font-size: 2.3em;
+            width: 60%;
+            margin-bottom: 5px;
+        }
+        small{
+            display: block;
+        }
+        p{
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .boton{
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    @media screen and (min-width: $desktop){
+        display: flex;
+        justify-content: space-around;
+
+        .img-news{
+            display: flex;
+            justify-content: center;
+            width: 45%;
+            padding-top: 3em;
+            img{
+                width: 90%;
+                margin-bottom: 4em;
+            }
+        }
+
+        .txt-news{
+            width: 45%;
+            padding-top: 3em;
+
+            h3, small{
+                margin-bottom: 10px;
+            }
+            h4{
+                width: 100%;
+            }
         }
     }
 }
