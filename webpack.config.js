@@ -39,13 +39,23 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: 'html-loader'
+            },
+            {
+                loader: "file-loader",
+                use : [
+                    {
+                        options : {
+                            name :'[name].[ext]'
+                        }
+                    }
+                ],
+                exclude : path.resolve(__dirname, './src/app/index.html')
             }
         ]
     },
 
     plugins: [
         new HtmlWebpackPlugin({
-            filename : "index.html",
             template: "./src/app/index.html" 
         }),
         new MiniCssExtractPlugin({

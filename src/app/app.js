@@ -1,12 +1,17 @@
 
+
+// importamos los archivos html
+
+
+
 // impostamos los script aquí
 
 import "./js/menu"
 import "./js/cursos"
 
-import "./cursos.html"
-import "./becas.html"
-
-// Importamos los estiulos aquí
+// Importamos los estilos aquí
 
 import "./sass/style.scss"
+
+import "./cursos.html"
+import "./becas.html"
