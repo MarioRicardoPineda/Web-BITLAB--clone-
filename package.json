@@ -21,7 +21,11 @@
   },
   "homepage": "https://github.com/MarioRicardoPineda/Web-BITLAB--clone-#readme",
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
     "autoprefixer": "^9.6.0",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.0.0",
     "file-loader": "^4.0.0",
     "html-loader": "^0.5.5",

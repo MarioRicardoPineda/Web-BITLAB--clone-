@@ -3,6 +3,20 @@ const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
+
+const HWPlugin = new HtmlWebpackPlugin({
+    template: "./src/app/index.html" 
+});
+
+let paginas = ['cursos', 'becas', 'eventos', 'aliados']
+
+let multiplesFiles = paginas.map(entryName => {
+    return new HtmlWebpackPlugin({
+      filename: entryName + '.html',
+      template: __dirname + `/src/app/${entryName}.html`
+  })
+})
+
 module.exports = {
     resolve: {
         modules: [
@@ -11,7 +25,12 @@ module.exports = {
         ],
     },
 
-    entry: "./src/app/app.js",
+    entry: {
+        app : [
+            "@babel/polyfill",
+            "./src/app/app.js" 
+        ]
+    },
 
     output: {
         path: path.resolve(__dirname + "/public"),
@@ -40,27 +59,19 @@ module.exports = {
                 test: /\.html$/,
                 loader: 'html-loader'
             },
-            {
-                loader: "file-loader",
-                use : [
-                    {
-                        options : {
-                            name :'[name].[ext]'
-                        }
-                    }
-                ],
-                exclude : path.resolve(__dirname, './src/app/index.html')
+            { 
+                test: /\.js$/, 
+                exclude: /node_modules/, 
+                loader: "babel-loader" 
             }
         ]
     },
 
     plugins: [
-        new HtmlWebpackPlugin({
-            template: "./src/app/index.html" 
-        }),
         new MiniCssExtractPlugin({
             filename: "css/[name]-style.css"
-        })
-    ],
+        }),
+        HWPlugin
+    ].concat(multiplesFiles)
 
 }
