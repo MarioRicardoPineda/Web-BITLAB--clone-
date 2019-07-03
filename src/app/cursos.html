@@ -21,8 +21,10 @@
             <div class="container-header">
                 <!-- LogoTipo -->
                 <div class="logo">
-                    <img src="./assets/img/logo-white.svg" alt="BITLAB" id="logo">
-                </div>
+                    <a href="./index.html">
+                         <img src="./assets/img/logo-white.svg" alt="BITLAB" id="logo">
+                    </a>
+                 </div>
 
                 <!-- menu de hamburguers -->
                 <div class="menu-ham " id="menu-ham">
@@ -47,9 +49,39 @@
         </div>
     </header>
 
-    <section class="courses" id="courses">
-        <!-- Card Generadas desde JS a traves de Ajax-->
-    </section>
+    <div style="
+    background-color: #bbb;
+    height: 5rem;
+    width: 100%"></div>
+
+    <!-- Sum-menu de cursos -->
+    <div class="sub-menu">
+        <a href="#s" class="menu-item">Desarrolo de software</a>
+        <a href="#s" class="menu-item">Estrategia digital</a>
+        <a href="#s" class="menu-item">Diseño</a>
+        <a href="#s" class="menu-item">Emprendimiento</a>
+    </div>
+
+   <main>
+       <section class="disponible">
+           <article>
+                <h2>Cursos Disponibles</h2>
+                <p>
+                     Te presentamos los cursos completos que BITLAB tiene para ti, encuentra el que deseas realizar e inscríbete y aprende de la mano de profesionales en el área.
+                </p>
+           </article>
+           <div class="checkboxs">
+                <input type="checkbox" id="free" class="check" >
+                <label for="free">Gratis</label>
+                <input type="checkbox" id="pay" class="check">
+                <label for="pay">Pagado</label>
+           </div>
+       </section>
+
+        <section class="cursos" id="courses">
+            <!-- Card Generadas desde JS a traves de Ajax-->
+        </section>
+   </main>
 
     <!-- Footer -->
     <footer>

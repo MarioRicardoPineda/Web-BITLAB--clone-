@@ -3,7 +3,6 @@
 
 import "./js/menu"
 import "./js/cursos"
-import "./js/cursosCompletos"
 
 // Importamos los estilos aquí
 

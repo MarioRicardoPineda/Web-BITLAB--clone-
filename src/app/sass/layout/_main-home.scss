@@ -234,3 +234,25 @@
         }
     }
 }
+
+// Pagina de cursos seccion disponibles
+
+.disponible{
+    @include flexCenter(wrap);
+    justify-content: space-between;
+    margin-bottom: 2.5em;
+    padding: 1em 3em;
+    article{
+        width: 50%;
+        h2{
+            font-size: 2em;
+            padding-bottom: 15px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+    .checkboxs{
+        width: 20%;
+    }
+}

@@ -1,12 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Becas</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./assets/img/favicon-bitlab.png" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/fa9cda3c98.js"></script>
+
 </head>
+
 <body>
-    <h1>becas</h1>
+    <!-- Encabezado -->
+    <header id="header">
+        <div class="container">
+            <div class="container-header">
+                <!-- LogoTipo -->
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./assets/img/logo-white.svg" alt="BITLAB" id="logo">
+                    </a>
+                </div>
+
+                <!-- menu de hamburguers -->
+                <div class="menu-ham " id="menu-ham">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+            </div>
+
+            <!-- menu general -->
+            <nav class="menu" id="menu">
+                <div class="container">
+                    <h3>¿Qué deseas conocer?</h3>
+                    <a href="./cursos.html" class="menu__link">Cursos</a>
+                    <a href="./becas.html" class="menu__link">Becas</a>
+                    <a href="./eventos.html" class="menu__link">Eventos</a>
+                    <a href="./aliados.html" class="menu__link">Aliados</a>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Seccion del banner -->
+    <section class="banner-becas">
+        <div class="fondo-becas">
+            <div class="container">
+                <div class="banner-title">
+                    <h2>For everyone</h2>
+                </div>
+                <div class="banner-txt">
+                    <p>
+                        Nuestro objetivo como BitLab es inspirar y promover que más personas ingresen al mundo digital
+                        para obtener un mejor trabajo en el futuro.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <main>
+        <div class="becas">
+            <article>
+                <h3>Tipos de Becas</h3>
+                <p>Puedes aplicar a una beca en nuestra academia si cumples con alguno de los siguientes perfiles:</p>
+            </article>
+
+            <div class="card-becas-container">
+                <div class="card-becas">
+                    <i class="fas fa-mars"></i>
+                    <h4>Beca mujeres Tech</h4>
+                    <p>Mayor de 16 años y sea una estudiante destacada.</p>
+                    <a href="#s" class="btn">Aplicar</a>
+                </div>
+                <div class="card-becas">
+                        <i class="fas fa-briefcase"></i>
+                    <h4>Beca para desempleados</h4>
+                    <p>Estudiantes con las puntuaciones más altas y estén buscando una oportunidad laboral.</p>
+                    <a href="#s" class="btn">Aplicar</a>
+                </div>
+                <div class="card-becas">
+                    <i class="far fa-star"></i>
+                    <h4>Beca a la excelencia</h4>
+                    <p>Si posees con un promedio mayor a 9.0 en tu colegio, instituto o universidad.</p>
+                    <a href="#s" class="btn">Aplicar</a>
+                </div>
+                <div class="card-becas">
+                    <i class="fas fa-fire-alt"></i>
+                    <h4>Beca jóvenes en situación vulnerable</h4>
+                    <p>Si vives en zonas de riesgo social.</p>
+                    <a href="#s" class="btn">Aplicar</a>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <img src="./assets/img/logo-white.svg" alt="">
+            <p class="txt-footer">
+                Todos los derechos reservados, 2019 &copy; BITLAB
+            </p>
+            <div class="socials">
+                <i class=" icon fas fa-phone"></i>2200-4197
+                <i class=" icon fab fa-facebook-f"></i>
+                <i class=" icon fab fa-instagram"></i>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

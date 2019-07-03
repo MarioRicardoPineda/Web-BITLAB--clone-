@@ -1,6 +1,4 @@
 .banner{
-    // background-color: #333;
-    // background-image: url('~assets/img/becas.png');
     @include bg-image('~assets/img/headway.jpg');
     width: 100%;
     height: 100vh;
@@ -48,4 +46,52 @@
     width: 100%;
     height: 100vh;
     background-color: rgba(#000, .5);
+}
+
+// Banner seccion becas
+
+.banner-becas, .banner-eventos, .banner-aliados{
+    @include bg-image('~assets/img/hitesh-choudhary.jpg');
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .banner-title{
+        @include flexCenter(wrap);
+        justify-content: flex-start;
+        h2{
+            font-size: 6em;
+            color: #FFF;
+        }
+        @media screen and (min-width: $desktop){
+            width: 825px;
+            font-size: 1.3em;
+        }
+        
+    }
+
+    .banner-txt{
+        width: 100%;
+        color: #FFF;
+
+        @media screen and (min-width: $desktop){
+            width: 40%;
+        }
+    }
+
+    @media screen and (min-width: $desktop){
+        height: 80vh;
+    }
+}
+.fondo-becas{
+    @include flexCenter();
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(#000, .5);
+
+    @media screen and (min-width: $desktop){
+        height: 80vh;
+    }
 }

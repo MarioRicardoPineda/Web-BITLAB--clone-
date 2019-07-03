@@ -132,3 +132,15 @@ header{
         }
     }
 }
+
+.sub-menu{
+    @include flexCenter();
+    background-color: #ddd;
+    padding: 2em;
+    margin-bottom: 3em;
+    .menu-item{
+        color: #222;
+        font-size: 15px;
+        margin: 0 2.1em;
+    }
+}
