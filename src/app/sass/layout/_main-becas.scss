@@ -1,3 +1,93 @@
 .becas{
-    
+    width: 100%;
+    position: relative;
+    margin: 6em 0;
+
+    img{
+        display: none;
+    }
+
+    .article-becas{
+        width: 100%;
+        margin-bottom: 5em;
+
+        @media screen and (min-width: $desktop){
+            width: 60%;
+        }
+
+        h3{
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+    }
+
+    .card-becas-container{
+        display: flex;
+        flex-wrap: wrap;
+
+        
+        .card-becas{
+            width: 90%;
+            @include marginCenter();
+            margin-bottom: 3em;
+            
+            h4, p , i{
+                margin-bottom: 10px;
+            }
+
+            i{
+                font-size: 2em;
+            }
+
+            &:hover {
+                h4{
+                    color: $main-color;
+                }
+                i{
+                    color: $main-color;
+                }
+            }
+
+            @media screen and (min-width: $tablet){
+                width: 45%;
+                margin-right: 1em;
+            }
+        }
+
+    }
+
+    @media screen and (min-width: $desktop-lg){
+       .card-becas-container{
+            width: 70%;
+
+       }
+
+       .mod{
+           width: 90%;
+           flex-wrap: nowrap;
+           margin: 0 auto;
+       }
+
+        img{
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 28%;
+        }
+    }
+}
+
+.boton-cont{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10em;
+   
+    @media screen and (max-width: $desktop){
+        a{
+            display: block;
+            width: 90%;
+            text-align: center;
+        }
+    }
 }
