@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server -d --open",
-    "build": "rimraf public && webpack -p"
+    "build": "rimraf docs && webpack -p"
   },
   "repository": {
     "type": "git",
