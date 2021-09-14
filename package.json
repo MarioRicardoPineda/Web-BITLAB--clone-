@@ -46,6 +46,6 @@
     "lodash": "^4.17.15",
     "minimist": "^1.2.5",
     "serialize-javascript": "^3.0.0",
-    "set-value": "^3.0.2"
+    "set-value": "^4.0.1"
   }
 }
