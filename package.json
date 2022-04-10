@@ -44,7 +44,7 @@
   "dependencies": {
     "acorn": "^7.2.0",
     "lodash": "^4.17.15",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "serialize-javascript": "^3.0.0",
     "set-value": "^3.0.2"
   }
